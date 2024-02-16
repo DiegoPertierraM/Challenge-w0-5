@@ -85,6 +85,25 @@ export const sortArray = (nameArray) => {
 
 // -- 7
 
+export const generateEvensAndOdds = (num) => {
+  const evenNums = [];
+  const oddNums = [];
+  const numbers = {
+    evens: evenNums,
+    odds: oddNums,
+  };
+  let counter = num;
+  while (counter > 0) {
+    if (counter % 2 === 0) {
+      evenNums.push(counter);
+    } else {
+      oddNums.push(counter);
+    }
+    counter--;
+  }
+  return numbers;
+};
+
 // -- 8
 
 // -- 9

@@ -5,6 +5,7 @@ import {
   operateNumArray,
   countWords,
   sortArray,
+  generateEvensAndOdds,
 } from './helpers.js';
 
 console.log(generatePiramid(7));
@@ -16,3 +17,4 @@ console.log(
 console.log('operateNumArray: ', operateNumArray([2, 8, 3, 14, 7, 2]));
 console.log('countWords: ', countWords('Hola me llamo Pedro'));
 console.log('sortArray: ', sortArray(['Casa', 'Palmera', 'Boda', 'Xilófono']));
+console.log('generateEvensAndOdds: ', generateEvensAndOdds(23));
