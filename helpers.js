@@ -55,6 +55,8 @@ const calcMedian = (arr) => {
 };
 
 const calcMode = (arr) => {
+  const sortedArray = arr.sort();
+  return sortedArray;
   const mode = sumArray(arr) / arr.length;
   return mode;
 };
@@ -70,6 +72,10 @@ export const operateNumArray = (arr) => {
 };
 
 // -- 5
+
+export const countWords = (phrase) => {
+  return phrase.split(' ').length;
+};
 
 // -- 6
 

@@ -3,6 +3,7 @@ import {
   generateRandomPassword,
   filterNames,
   operateNumArray,
+  countWords,
 } from './helpers.js';
 
 console.log(generatePiramid(7));
@@ -12,3 +13,4 @@ console.log(
   filterNames(['Pepe', 'Margarita', 'Sol', 'Manolo'], 6)
 );
 console.log('operateNumArray: ', operateNumArray([2, 8, 3, 14, 7, 2]));
+console.log('countWords: ', countWords('Hola me llamo Pedro'));
