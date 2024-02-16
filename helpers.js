@@ -1,10 +1,13 @@
 // -- 1
 
 export const generatePiramid = (height) => {
+  let counter = height;
   let piramid = '*';
-  for (let i = 1; i < height; i++) {
-    console.log(piramid);
-    piramid += '**';
+  piramid = ' '.repeat(height) + piramid;
+  for (let i = 0; i < height; i++) {
+    piramid += ' '.repeat(counter) + '**'.repeat(i);
+    piramid = piramid + '\n';
+    counter--;
   }
   return piramid;
 };
