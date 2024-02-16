@@ -2,6 +2,7 @@ import {
   generatePiramid,
   generateRandomPassword,
   filterNames,
+  operateNumArray,
 } from './helpers.js';
 
 console.log(generatePiramid(7));
@@ -10,3 +11,4 @@ console.log(
   'filterNames: ',
   filterNames(['Pepe', 'Margarita', 'Sol', 'Manolo'], 6)
 );
+console.log('operateNumArray: ', operateNumArray([2, 8, 3, 14, 7, 2]));

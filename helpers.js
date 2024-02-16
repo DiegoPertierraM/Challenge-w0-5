@@ -39,6 +39,36 @@ export const filterNames = (arr, maxLength) => {
 
 // -- 4
 
+const sumArray = (arr) => {
+  const sum = arr.reduce((accumulator, value) => accumulator + value, 0);
+  return sum;
+};
+
+const calcAverage = (arr) => {
+  const average = sumArray(arr) / arr.length;
+  return average;
+};
+
+const calcMedian = (arr) => {
+  const median = arr[Math.trunc(arr.length / 2)];
+  return median;
+};
+
+const calcMode = (arr) => {
+  const mode = sumArray(arr) / arr.length;
+  return mode;
+};
+
+export const operateNumArray = (arr) => {
+  const operations = {
+    sum: sumArray(arr),
+    average: calcAverage(arr),
+    median: calcMedian(arr),
+    mode: calcMode(arr),
+  };
+  return operations;
+};
+
 // -- 5
 
 // -- 6
