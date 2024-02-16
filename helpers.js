@@ -32,6 +32,11 @@ export const generateRandomPassword = (passwordLength) => {
 
 // -- 3
 
+export const filterNames = (arr, maxLength) => {
+  const shortNames = arr.filter((name) => name.length < maxLength);
+  return shortNames;
+};
+
 // -- 4
 
 // -- 5
