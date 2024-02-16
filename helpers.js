@@ -79,6 +79,10 @@ export const countWords = (phrase) => {
 
 // -- 6
 
+export const sortArray = (nameArray) => {
+  return nameArray.sort();
+};
+
 // -- 7
 
 // -- 8
