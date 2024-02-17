@@ -7,6 +7,7 @@ import {
   sortArray,
   generateEvensAndOdds,
   turnToCamelCase,
+  turnToAllCases,
 } from './helpers.js';
 
 console.log(generatePiramid(7));
@@ -20,3 +21,4 @@ console.log('countWords: ', countWords('Hola me llamo Pedro'));
 console.log('sortArray: ', sortArray(['Casa', 'Palmera', 'Boda', 'Xilófono']));
 console.log('generateEvensAndOdds: ', generateEvensAndOdds(23));
 console.log('turnToCamelCase: ', turnToCamelCase('random-word'));
+console.log('turnToAllCases: ', turnToAllCases('anotherRandomWord'));

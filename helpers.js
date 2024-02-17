@@ -126,8 +126,49 @@ export const turnToCamelCase = (str) => {
   return textArr.join('');
 };
 
-// -- 9
+// -- Adicional - 1
 
-// -- 10
+const turnToKebabCase = (str) => {
+  const textArr = str.split('');
+  for (let i = 0; i < textArr.length; i++) {
+    if (textArr[i] === textArr[i].toUpperCase()) {
+      textArr[i] = textArr[i].toLowerCase();
+      textArr.splice(i, 0, '-');
+    }
+  }
+  return textArr.join('');
+};
 
-// -- 11
+const turnToSnakeCase = (str) => {
+  const textArr = str.split('');
+  for (let i = 0; i < textArr.length; i++) {
+    if (textArr[i] === textArr[i].toUpperCase()) {
+      textArr[i] = textArr[i].toLowerCase();
+      textArr.splice(i, 0, '_');
+    }
+  }
+  return textArr.join('');
+};
+
+const turnToPascalCase = (str) => {
+  const textArr = str.split('');
+  textArr[0] = textArr[0].toUpperCase();
+  return textArr.join('');
+};
+
+export const turnToAllCases = (str) => {
+  if (str === ' ') {
+    return 'You must provide some text';
+  }
+  const allCases = {
+    kebabCase: turnToKebabCase(str),
+    snakeCase: turnToSnakeCase(str),
+    camelCase: str,
+    pascalCase: turnToPascalCase(str),
+  };
+  return allCases;
+};
+
+// -- Adicional - 2
+
+// -- Adicional - 3
