@@ -106,6 +106,26 @@ export const generateEvensAndOdds = (num) => {
 
 // -- 8
 
+export const turnToCamelCase = (str) => {
+  if (str === ' ') {
+    return 'You must provide some text';
+  }
+  const textArr = str.split('');
+  for (let i = 0; i < textArr.length; i++) {
+    if (textArr[i] === textArr[i].toUpperCase() && textArr[i] !== '-') {
+      return 'The text contains capital letters';
+    }
+    if (textArr[i] === '_') {
+      return 'The text contains underscores';
+    }
+    if (textArr[i] === '-') {
+      textArr.splice(i, 1);
+      textArr[i] = textArr[i].toUpperCase();
+    }
+  }
+  return textArr.join('');
+};
+
 // -- 9
 
 // -- 10
