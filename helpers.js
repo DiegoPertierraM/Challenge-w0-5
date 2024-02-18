@@ -193,7 +193,6 @@ export const switchTextAccents = (str) => {
   const vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < strArr.length; i++) {
     if (accents.includes(strArr[i])) {
-      console.log('works');
       strArr[i] = strArr[i].normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     } else if (vowels.includes(strArr[i])) {
       strArr[i] = accentuateVowel(strArr[i]);
@@ -203,3 +202,15 @@ export const switchTextAccents = (str) => {
 };
 
 // -- Adicional - 3
+
+export const switchUpperAndLowerCase = (str) => {
+  const strArr = str.split('');
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] === strArr[i].toUpperCase()) {
+      strArr[i] = strArr[i].toLowerCase();
+    } else {
+      strArr[i] = strArr[i].toUpperCase();
+    }
+  }
+  return strArr.join('');
+};

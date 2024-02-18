@@ -9,6 +9,7 @@ import {
   turnToCamelCase,
   turnToAllCases,
   switchTextAccents,
+  switchUpperAndLowerCase,
 } from './helpers.js';
 
 console.log(generatePiramid(15));
@@ -26,4 +27,8 @@ console.log('turnToAllCases: ', turnToAllCases('anotherRandomWord'));
 console.log(
   'switchTextAccents: ',
   switchTextAccents('A véces me gústa salír a páséar')
+);
+console.log(
+  'switchUpperAndLowerCase: ',
+  switchUpperAndLowerCase('EsTa SemAna hA SidO DuRa')
 );
