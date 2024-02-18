@@ -22,6 +22,7 @@ console.log('operateNumArray: ', operateNumArray([2, 8, 3, 14, 7, 2]));
 console.log('countWords: ', countWords('Hola me llamo Pedro'));
 console.log('sortArray: ', sortArray(['Casa', 'Palmera', 'Boda', 'Xilófono']));
 console.log('generateEvensAndOdds: ', generateEvensAndOdds(23));
+console.log('generateEvensAndOdds: ', generateEvensAndOdds(-30));
 console.log('turnToCamelCase: ', turnToCamelCase('random-word'));
 console.log('turnToAllCases: ', turnToAllCases('anotherRandomWord'));
 console.log(

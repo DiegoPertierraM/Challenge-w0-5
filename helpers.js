@@ -55,10 +55,20 @@ const calcMedian = (arr) => {
 };
 
 const calcMode = (arr) => {
-  const sortedArray = arr.sort();
-  return sortedArray;
-  const mode = sumArray(arr) / arr.length;
-  return mode;
+  const numbers = arr;
+  const count = {};
+  numbers.forEach((num) => {
+    count[num] = (count[num] || 0) + 1;
+  });
+  let mode;
+  let maxCount = 0;
+  for (const num in count) {
+    if (count[num] > maxCount) {
+      mode = num;
+      maxCount = count[num];
+    }
+  }
+  return Number(mode);
 };
 
 export const operateNumArray = (arr) => {
@@ -100,6 +110,14 @@ export const generateEvensAndOdds = (num) => {
       oddNums.push(counter);
     }
     counter--;
+  }
+  while (counter < 0) {
+    if (counter % 2 === 0) {
+      evenNums.push(counter);
+    } else {
+      oddNums.push(counter);
+    }
+    counter++;
   }
   return numbers;
 };
@@ -187,13 +205,29 @@ function accentuateVowel(letter) {
   return accents[letter] || letter;
 }
 
+function removeAccents(letter) {
+  const vowels = {
+    á: 'a',
+    é: 'e',
+    í: 'i',
+    ó: 'o',
+    ú: 'u',
+    Á: 'A',
+    É: 'E',
+    Í: 'I',
+    Ó: 'O',
+    Ú: 'U',
+  };
+  return vowels[letter] || letter;
+}
+
 export const switchTextAccents = (str) => {
   const strArr = str.split('');
   const accents = ['Á', 'É', 'Í', 'Ó', 'Ú', 'á', 'é', 'í', 'ó', 'ú'];
   const vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
   for (let i = 0; i < strArr.length; i++) {
     if (accents.includes(strArr[i])) {
-      strArr[i] = strArr[i].normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      strArr[i] = removeAccents(strArr[i]);
     } else if (vowels.includes(strArr[i])) {
       strArr[i] = accentuateVowel(strArr[i]);
     }

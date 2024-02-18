@@ -33,4 +33,4 @@ Empezamos creando un proyecto y un repo de git /github para el mismo. Subimos el
 
 2. Crea una función que reciba un texto y devuelva el mismo texto con todas las vocales acentuadas reemplazadas por vocales sin acentuar y todas las vocales sin acentuar reemplazadas por vocales acentuadas.
 
-3. Crea una función que reciba un texto y devuelva el mismo texto con todas las letras en mayúsculas y todas las letras en minúsculas intercambiadas.# Challenge 5 - Week 0
+3. Crea una función que reciba un texto y devuelva el mismo texto con todas las letras en mayúsculas y todas las letras en minúsculas intercambiadas.
