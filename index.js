@@ -8,9 +8,10 @@ import {
   generateEvensAndOdds,
   turnToCamelCase,
   turnToAllCases,
+  switchTextAccents,
 } from './helpers.js';
 
-console.log(generatePiramid(7));
+console.log(generatePiramid(15));
 console.log('generateRandomPassword: ', generateRandomPassword(8));
 console.log(
   'filterNames: ',
@@ -22,3 +23,7 @@ console.log('sortArray: ', sortArray(['Casa', 'Palmera', 'Boda', 'Xilófono']));
 console.log('generateEvensAndOdds: ', generateEvensAndOdds(23));
 console.log('turnToCamelCase: ', turnToCamelCase('random-word'));
 console.log('turnToAllCases: ', turnToAllCases('anotherRandomWord'));
+console.log(
+  'switchTextAccents: ',
+  switchTextAccents('A véces me gústa salír a páséar')
+);

@@ -171,4 +171,35 @@ export const turnToAllCases = (str) => {
 
 // -- Adicional - 2
 
+function accentuateVowel(letter) {
+  const accents = {
+    a: 'á',
+    e: 'é',
+    i: 'í',
+    o: 'ó',
+    u: 'ú',
+    A: 'Á',
+    E: 'É',
+    I: 'Í',
+    O: 'Ó',
+    U: 'Ú',
+  };
+  return accents[letter] || letter;
+}
+
+export const switchTextAccents = (str) => {
+  const strArr = str.split('');
+  const accents = ['Á', 'É', 'Í', 'Ó', 'Ú', 'á', 'é', 'í', 'ó', 'ú'];
+  const vowels = ['A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'];
+  for (let i = 0; i < strArr.length; i++) {
+    if (accents.includes(strArr[i])) {
+      console.log('works');
+      strArr[i] = strArr[i].normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    } else if (vowels.includes(strArr[i])) {
+      strArr[i] = accentuateVowel(strArr[i]);
+    }
+  }
+  return strArr.join('');
+};
+
 // -- Adicional - 3
